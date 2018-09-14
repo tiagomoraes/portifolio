@@ -156,19 +156,15 @@ body {
     }
     
     .navbar-collapse {
-        display: none;
-    }
-
-    .navbar.responsive .navbar-menu {
-        background-color: black;
-    }
-
-    .navbar.responsive .navbar-collapse {
         display: flex;
         margin: 0;
     }
 
-    .navbar.responsive .navbar-buttons {
+    .navbar-menu {
+        background-color: black;
+    }
+
+    .navbar-buttons {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -188,7 +184,8 @@ body {
 
         background-color: black;
         border-top: 1px solid white;
-        color: #004b4e;
+
+        display: none;
     }
 
     .navbar-buttons {
