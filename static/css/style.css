@@ -7,7 +7,7 @@ body {
     height: 400vh;
 }
 
-/*NAVBAR*/
+/* -------------------- NAVBAR --------------------*/
 .navbar {
     width: 100%;
     height: 70px;
@@ -79,7 +79,7 @@ body {
     display: none;
 }
 
-/*HOME*/
+/* -------------------- HOME --------------------*/
 .home {
     display: flex;
     flex-direction: row;
@@ -106,7 +106,7 @@ body {
     display: flex;
     align-self: center;
 
-    height: 10px;
+    height: 0.6rem;
     width: 180px;
 
     background-color: black;
@@ -137,7 +137,7 @@ body {
 
 @media (max-width: 1024px) {
 
-    /*NAVBAR*/
+    /* -------------------- NAVBAR -------------------- */
     .navbar {
         height: 60px;
     }
@@ -241,7 +241,7 @@ body {
     }
 
 
-    /*Fazer o "X" quando abre o menu hamburguer*/
+    /*Makes the X when opens the menu*/
     .change .bar1 {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
@@ -260,7 +260,7 @@ body {
         top: 11px;
     }
 
-    /*HOME*/
+    /* -------------------- HOME -------------------- */
     .home-content {
         width: 300px;
     }
