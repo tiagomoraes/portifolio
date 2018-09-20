@@ -55,7 +55,7 @@
                         <a class="navbar-buttons__link" href="#idHome">SOCIAL</a>
                     </li>
                     <li>
-                        <a class="navbar-buttons__link" href="#idHome">CONTACT</a>
+                        <a class="navbar-buttons__link" href="#idContact">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -78,10 +78,42 @@
                 <div class="home-content__bar"></div>
             </div>
         </div>
+        <div class="contact" id="idContact">
+            <div class="contact-flex-container">
+                <h2 class="contact-title">CONTACT</h2>
+                <form method="POST" class="contact-form" id="contact-form">
+                    <div class="contact-form-box">
+                        <input type="text" name="name" id="name" placeholder="Name*" class="contact-form__field form-small" required>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone" class="contact-form__field form-small">
+                    </div>
+                    <input type="email" name="email" id="email" placeholder="Email*" class="contact-form__field" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" class="contact-form__field">
+                    <div class="contact-form__field">
+                        <select name="how_select" id="how" class="contact-form__selector">
+                            <option value="" disabled selected>How did you get here?</option>
+                            <option value="CIn Website">Social Network</option>
+                            <option value="CIn Website">Cin Website</option>
+                            <option value="CIn Website">Some Friend</option>
+                        </select>
+                    </div>
+                    <textarea type="text" name="message" id="message" placeholder="Message" class="contact-form__field form-tall"></textarea>
+                    <span class="contact-success" id="contact-success">Message sent with success!</span>
+                    <input type="submit" value="Send" class="contact-form__submit" id="contact-form__submit">
+                </form>
+            </div>
+        </div>
     </div>
     
     <!--jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--EmailJS CDN and activation-->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_stL2ESqX66lExpgZmGr1W");
+        })();
+    </script>
    
     <!--main.js-->
     <script src="static/js/main.js"></script>

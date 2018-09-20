@@ -54,7 +54,7 @@ $('a[href*="#"]')
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top - 10 // Scrolls to position, but stops 10px before
+          scrollTop: target.offset().top - 70 // Scrolls to position, but stops 10px before
         }, 1000, function() {
           // Callback after animation
           // Must change focus!
@@ -70,3 +70,36 @@ $('a[href*="#"]')
       }
     }
   });
+
+/* -------------------- CONTACT -------------------- */
+$('#contact-form').submit((event) => {
+  event.preventDefault();
+
+  // Serializes an array with all the form fields as params
+  let params = $('#contact-form').serializeArray().reduce((obj, item) => {
+    obj[item.name] = item.value;
+    return obj;
+  }, {});
+
+  // set default variables for servide id and template id
+  let service_id = "default_service";
+  let template_id = "portifolio_template";  
+
+  $('#contact-form__submit').val('Sending...'); // changes the submit button text to 'Sending...'
+  emailjs.send(service_id,template_id,params)
+  .then(() => { 
+    $('#contact-success').fadeIn(400); // Shows a span with the set success message
+    $('#contact-form__submit').val('Send'); // Resets the submit button value
+
+    // Timeout for removing the success span
+    setTimeout(() => {
+    $('#contact-success').fadeOut(400);
+    }, 3000);
+
+    // How to perform if sending returns an error
+    }, (err) => {
+      $('#contact-form__submit').val('Send');
+      console.log(err);
+    });
+  return false;
+})
