@@ -72,6 +72,7 @@ body {
     text-decoration: none;
     color: white;
     font-family: 'Lato', sans-serif;
+    font-size: 1rem;
 }
 
 .navbar-hamburger {
@@ -87,7 +88,7 @@ body {
 
     height: 100vh;
 
-    background-image: url('../images/eberhard-grossgasteiger-382452-unsplash.jpg');
+    background-image: url('../images/eberhard-grossgasteiger-382452-unsplash-small.jpeg');
     background-size: cover;
     background-repeat: space;
     background-attachment: fixed;
@@ -134,6 +135,168 @@ body {
     color: white;
 }
 
+/* -------------------- ABOUT ---------------------*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    background-color: black;
+}
+
+.about-flex-container {
+    width: 90%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+
+    background-color: white;
+}
+
+.about-title__small {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.about-content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 50%;
+    height: 80%;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    margin-bottom: 40px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: white;
+}
+
+.highlight {
+    font-weight: 400;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.about-text-paragraph {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about-text-paragraph__medium {
+    font-size: 1.5rem;
+}
+
+.about-text-paragraph__big{
+    font-size: 1.7rem;
+}
+
+.about-know {
+    margin-left: 30px;
+    margin-top: 0;
+
+    font-size: 1.5rem;
+    list-style-type: square;
+}
+
+.about-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 40%;
+    margin-left: 10%;
+}
+
+.about-image__image {
+    width: 80%;
+    margin-bottom: 40px;
+
+    border-radius: 100%;
+    border: 8px solid white;
+}
+
+.about-image-text {
+    display: inline-block;
+
+    width: 90%;
+}
+
+.about-image-text__text {
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.3rem;
+    color: white;
+}
+
+#typed {
+    text-align: center;
+}
+
+.typed-cursor {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 /* -------------------- CONTACT -------------------- */
 .contact {
     height: fit-content;
@@ -172,7 +335,7 @@ body {
     border-bottom: 2px solid black;
 
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.7rem;
     color: black;
 }

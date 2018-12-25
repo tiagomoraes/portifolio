@@ -54,7 +54,7 @@ $('a[href*="#"]')
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: (target.offset().top - 70) // Scrolls to position, but stops 70px before
+          scrollTop: (target.offset().top) // Scrolls to position
         }, 1000, function() {
           // Callback after animation
           // Must change focus!
@@ -70,6 +70,20 @@ $('a[href*="#"]')
       }
     }
   });
+
+/* -------------------- ABOUT -------------------- */
+var options = {
+  backSpeed: 16,
+  backDelay: 1600,
+  stringsElement: '#typed-html',
+  contentType: 'html',
+  typeSpeed: 36,
+  loop: true,
+  showCursor: true,
+}
+
+var typed = new Typed("#typed", options);
+
 
 /* -------------------- CONTACT -------------------- */
 $('#contact-form').submit((event) => {
