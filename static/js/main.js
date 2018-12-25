@@ -73,11 +73,11 @@ $('a[href*="#"]')
 
 /* -------------------- ABOUT -------------------- */
 var options = {
-  backSpeed: 16,
-  backDelay: 1600,
-  stringsElement: '#typed-html',
+  backSpeed: 20, // speed of deleting (less == fast)
+  backDelay: 1600, // interval between cycles
+  stringsElement: '#typed-html', // id of element conteining paragraphs (SEO friendly)
   contentType: 'html',
-  typeSpeed: 36,
+  typeSpeed: 36, // speed of typing (less == fast)
   loop: true,
   showCursor: true,
 }
