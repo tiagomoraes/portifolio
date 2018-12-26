@@ -94,12 +94,14 @@ $(document).ready(function(){
         breakpoint: 1280,
         settings: {
           slidesToShow: 2,
+          arrows: false,
         }
       },
       {
         breakpoint: 720,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         }
       },
     ]

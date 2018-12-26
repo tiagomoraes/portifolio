@@ -831,7 +831,20 @@ body {
         margin-bottom: 60px;
         
         font-size: 2.2rem;
-    }   
+    }
+
+    .projects-slick {    
+        height: 64%;
+    }
+    
+    .projects-slick-item {
+        height: 58vh;
+    }
+
+    .slick-slide {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 
     /* -------------------- CONTACT -------------------- */
     .contact {
