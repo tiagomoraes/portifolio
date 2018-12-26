@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tiago Moraes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="static/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="static/css/style.css" />
-
+    
     <!--importing Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet">
-
+    
     <!--inporting icons-->
     <!--FAVICON-->
     <link rel="apple-touch-icon" sizes="57x57" href="static/icons/apple-icon-57x57.png">
@@ -31,17 +29,28 @@
     <link rel="manifest" href="static/icons/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="static/icons/favicon/ms-icon-144x144.png">
-
+    
     <!--Customized head bars-->
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <!--Slick CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+
+    <!--Main CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="static/css/style.css" />
 
 </head>
 <body>
     <div class="flex-container">
         <nav class="navbar" id="idNavbar">
             <a class="navbar-logo" href="#idHome">
-                <img class="navbar-logo__image" src="static/icons/TM-Logo.png" alt="TM logo">
+                <img class="navbar-logo__image" src="static/icons/TM-Logo.png" alt="My logo">
                 <h2 class="navbar-logo__text">TIAGO MORAES</h2>
             </a>
             <div class="navbar-collapse">
@@ -53,13 +62,13 @@
                         <a class="navbar-buttons__link" href="#idAbout">ABOUT</a>
                     </li>
                     <li>
-                        <a class="navbar-buttons__link" href="https://github.com/tiagomoraes/" target="_blank">REPOSITORY</a>
-                    </li>
-                    <li>
-                        <a class="navbar-buttons__link" href="https://www.facebook.com/tiago.moraes.14224" target="_blank">SOCIAL</a>
+                        <a class="navbar-buttons__link" href="#idProjects" target="_blank">PROJECTS</a>
                     </li>
                     <li>
                         <a class="navbar-buttons__link" href="#idContact">CONTACT</a>
+                    </li>
+                    <li>
+                        <a class="navbar-buttons__link" href="#idFooter">SOCIAL</a>
                     </li>
                 </ul>
             </div>
@@ -123,6 +132,22 @@
                 </div>
             </div>
         </section>
+        <section class="projects" id="idProjects">
+            <div class="projects-flex-container">
+                <div class="projects-title">
+                    <span class="projects-title__text">PROJECTS</span>
+                </div>
+                <div class="projects-slick">
+                    <div class="projects-slick-item">1</div>
+                    <div class="projects-slick-item">2</div>
+                    <div class="projects-slick-item">3</div>
+                    <div class="projects-slick-item">4</div>
+                    <div class="projects-slick-item">5</div>
+                    <div class="projects-slick-item">6</div>
+                    <div class="projects-slick-item">7</div>
+                </div>
+            </div>
+        </section>
         <section class="contact" id="idContact">
             <div class="contact-flex-container">
                 <h2 class="contact-title">CONTACT</h2>
@@ -148,13 +173,54 @@
                 </form>
             </div>
         </section>
-        <section class="footer">
-
-        </section>
+        <footer class="footer" id="idFooter">
+            <div class="footer-flex-container">
+                <a href="#idHome" class="footer-logo">
+                    <i class="fas fa-caret-up footer-logo__arrow"></i>
+                    <img class="footer-logo__image" src="static/icons/TM-Logo.png" alt="My logo">
+                </a>
+                <div class="footer-social">
+                    <div class="footer-social-box">
+                        <a class="footer-social-link" href="https://www.linkedin.com/in/tiago-moraes-7516a015b/" target="_blank">
+                            <img class="footer-social__icon" src="static/icons/social/iconmonstr-linkedin-4.svg" alt="My Linkedin">
+                            <span class="footer-social__text">tiago-moraes-7516a015b</span>
+                        </a>
+                        <a class="footer-social-link" href="https://github.com/tiagomoraes" target="_blank">
+                            <img class="footer-social__icon" src="static/icons/social/iconmonstr-github-1.svg" alt="My GitHub">
+                            <span class="footer-social__text">tiagomoraes</span>
+                        </a>
+                    </div>
+                    <div class="footer-social-box">
+                        <a class="footer-social-link" href="mailto:tiago3902@gmail.com" target="_blank">
+                            <img class="footer-social__icon" src="static/icons/social/iconmonstr-email-10.svg" alt="My email">
+                            <span class="footer-social__text">tiago3902@gmail.com</span>
+                        </a>
+                        <a class="footer-social-link" href="https://web.facebook.com/tiago.moraes.14224/" target="_blank">
+                            <img class="footer-social__icon" src="static/icons/social/iconmonstr-facebook-4.svg" alt="My Facebook">
+                            <span class="footer-social__text">tiago.moraes.14224</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-copyright">
+                    Copyright <i class="far fa-copyright"></i> 2018 by Tiago Moraes
+                </div>
+                <div class="footer-bottom-made">Made with
+                    <i class="fa fa-code"></i> and
+                    <i class="far fa-heart" id="coracao"></i>
+                </div>
+            </div>
+        </footer>
     </div>
     
     <!--jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!--Slick JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <!--Typed CDN-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
@@ -166,7 +232,7 @@
             emailjs.init("user_stL2ESqX66lExpgZmGr1W");
         })();
     </script>
-   
+
     <!--main.js-->
     <script src="static/js/main.js"></script>
 </body>
