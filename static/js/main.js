@@ -88,6 +88,21 @@ $(document).ready(function(){
     speed: 500,
     arrows: true,
     dots: true,
+    dotsClass: 'slick-dots projetos-slick__dots',
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   });
 
   /* -------------------- CONTACT -------------------- */
