@@ -82,11 +82,16 @@ $(document).ready(function(){
   var typed = new Typed("#typed", options);
 
   /* -------------------- PROJECTS -------------------- */
+  const slickPrev = $('#projects-slick__left');
+  const slickNext = $('#projects-slick__right');
+
   $('.projects-slick').slick({
     infinite: true,
     slidesToShow: 3,
     speed: 500,
     arrows: true,
+    prevArrow: slickPrev,
+    nextArrow: slickNext,
     dots: true,
     dotsClass: 'slick-dots projetos-slick__dots',
     responsive: [
@@ -101,7 +106,8 @@ $(document).ready(function(){
         breakpoint: 720,
         settings: {
           slidesToShow: 1,
-          arrows: false,
+          prevArrow: null,
+          nextArrow: null,
         }
       },
     ]
