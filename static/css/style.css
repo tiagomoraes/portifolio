@@ -94,7 +94,7 @@ body {
 /* -------------------- HOME --------------------*/
 .home {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -145,6 +145,15 @@ body {
     text-align: center;
 
     color: white;
+}
+
+.home-down {
+    text-decoration: none;
+    font-size: 2.8rem;
+    color: black;
+
+    position: absolute;
+    top: calc(100% - 50px);
 }
 
 /* -------------------- ABOUT ---------------------*/
