@@ -379,13 +379,32 @@ body {
 }
 
 .projects-slick__arrow {
+    margin: 15px;
+
     font-size: 2.4rem;
+    cursor: pointer;
 }
 
 .projects-slick-item {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
     height: 54vh;
 
     background-color: black;
+}
+
+.projects-slick-item-image {
+    width: 80%;
+
+    margin-top: 30px;
+}
+
+.projects-slick-item-image__mac {
+    width: 100%;
+    
 }
 
 .slick-dots li button::before {
@@ -714,10 +733,6 @@ body {
 
     .navbar-buttons__link {
         font-size: 1.1rem;
-    }
-
-    .navbar-buttons__link:hover {
-        font-weight: 600;
     }
 
     .navbar-hamburger {
