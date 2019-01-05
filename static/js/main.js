@@ -85,7 +85,7 @@ $(document).ready(function(){
   const slickPrev = $('#projects-slick__left');
   const slickNext = $('#projects-slick__right');
 
-  $('.projects-slick').slick({
+  $('.projects-slick').slick({ // Slick initializer
     infinite: true,
     slidesToShow: 3,
     speed: 500,
@@ -105,6 +105,18 @@ $(document).ready(function(){
       },
     ]
   });
+
+  $('.projects-slick-item-footer__link').click(function() { // Shows modal of project
+    let projectId = $(this).attr('number'); // get's attribute 'number' from button
+    $('body').css('overflow', 'hidden'); // hides scrolbar
+    $('#projects-modal-' + projectId).fadeIn(); // jQuery fade in
+  });
+
+  $('.projects-modal__close').click(function() {
+    let projectId = $(this).attr('number');
+    $('body').css('overflow', 'auto'); // show scrollbar
+    $('#projects-modal-' + projectId).fadeOut();
+  })
 
   /* -------------------- CONTACT -------------------- */
   $('#contact-form').submit((event) => {
