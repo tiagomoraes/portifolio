@@ -108,13 +108,17 @@ $(document).ready(function(){
 
   $('.projects-slick-item-footer__link').click(function() { // Shows modal of project
     let projectId = $(this).attr('number'); // get's attribute 'number' from button
-    $('body').css('overflow', 'hidden'); // hides scrolbar
+    if(screen.width >= 1024) { // only if on small screen (mobile)
+      $('body').css('overflow', 'hidden'); // hides scrolbar
+    }
     $('#projects-modal-' + projectId).fadeIn(); // jQuery fade in
   });
 
   $('.projects-modal__close').click(function() {
     let projectId = $(this).attr('number');
-    $('body').css('overflow', 'auto'); // show scrollbar
+    if(screen.width >= 1024) { // only if on small screen (mobile)
+      $('body').css('overflow', 'auto'); // show scrollbar
+    }
     $('#projects-modal-' + projectId).fadeOut();
   })
 
