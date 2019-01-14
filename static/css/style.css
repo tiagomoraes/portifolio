@@ -672,6 +672,7 @@ body {
     border: none;
     border-bottom: 2px solid black;
     outline: none;
+    border-radius: 0;
     
     color: black;
     font-family: 'Lato', sans-serif;
@@ -982,6 +983,10 @@ body {
     }
 
     /* -------------------- HOME -------------------- */
+    .home {
+        background-attachment: scroll;
+    }
+
     .home-content {
         width: 300px;
     }
