@@ -82,30 +82,43 @@ $(document).ready(function(){
   var typed = new Typed("#typed", options);
 
   /* -------------------- PROJECTS -------------------- */
-  $('.projects-slick').slick({
+  const slickPrev = $('#projects-slick__left');
+  const slickNext = $('#projects-slick__right');
+
+  $('.projects-slick').slick({ // Slick initializer
     infinite: true,
     slidesToShow: 3,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
     arrows: true,
+    prevArrow: slickPrev,
+    nextArrow: slickNext,
     dots: true,
     dotsClass: 'slick-dots projetos-slick__dots',
     responsive: [
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 2,
-          arrows: false,
-        }
-      },
-      {
-        breakpoint: 720,
-        settings: {
           slidesToShow: 1,
-          arrows: false,
+          prevArrow: null,
+          nextArrow: null,
         }
       },
     ]
   });
+
+  $('.projects-slick-item-footer__link').click(function() { // Shows modal of project
+    let projectId = $(this).attr('number'); // get's attribute 'number' from button
+    $('body').css('overflow', 'hidden'); // hides scrolbar
+    $('#projects-modal-' + projectId).fadeIn(); // jQuery fade in
+  });
+
+  $('.projects-modal__close').click(function() {
+    let projectId = $(this).attr('number');
+    $('body').css('overflow', 'auto'); // show scrollbar
+    $('#projects-modal-' + projectId).fadeOut();
+  })
 
   /* -------------------- CONTACT -------------------- */
   $('#contact-form').submit((event) => {

@@ -50,7 +50,7 @@
     <div class="flex-container">
         <nav class="navbar" id="idNavbar">
             <a class="navbar-logo" href="#idHome">
-                <img class="navbar-logo__image" src="static/icons/TM-Logo.png" alt="My logo">
+                <img class="navbar-logo__image" src="static/icons/TM-Logo-low-res.png" alt="My logo">
                 <h2 class="navbar-logo__text">TIAGO MORAES</h2>
             </a>
             <div class="navbar-collapse">
@@ -90,6 +90,9 @@
                 </div>
                 <div class="home-content__bar"></div>
             </div>
+            <a href="#idAbout" class="home-down">
+                <i class="fas fa-caret-down"></i>
+            </a>
         </section>
         <section class="about" id="idAbout">
             <div class="about-flex-container">
@@ -97,7 +100,7 @@
                     <h2 class="about-title">ABOUT <span class="about-title__small">ME</span></h2>
                     <div class="about-text">
                         <p class="about-text-paragraph about-text-paragraph__big">Computer Science student at <a href="https://www.ufpe.br/" target="_blank" class="highlight link">UFPE</a> and tech enthusiast.</p>
-                        <p class="about-text-paragraph">Developing is one of passions and now a part of me. I Love studying and discovering new stuff, turning complex problems into simple ones. When i'm not coding, i'm the biggest YouTube fan and random videos lover.</p>
+                        <p class="about-text-paragraph">Developing is one of my passions and now a part of me. I Love studying and discovering new stuff, turning complex problems into simple ones. When i'm not coding, i'm the biggest YouTube fan and random videos lover.</p>
                         <p class="about-text-paragraph">Currently I’m a Full Stack developer <a href="http://citi.org.br/" target="_blank" class="highlight link">@CITi</a> and opened for new oportunities.</p>
                     </div>
                     <h2 class="about-title about-title__small">What I know?</h2>
@@ -132,21 +135,111 @@
                 </div>
             </div>
         </section>
-        <!--
         <section class="projects" id="idProjects">
             <div class="projects-flex-container">
                 <div class="projects-title">
                     <span class="projects-title__text">PROJECTS</span>
                 </div>
-                <div class="projects-slick">
-                    <div class="projects-slick-item">1</div>
-                    <div class="projects-slick-item">2</div>
-                    <div class="projects-slick-item">3</div>
-                    <div class="projects-slick-item">4</div>
+                <div class="projects-slick-container">
+                    <i class="fas fa-chevron-left projects-slick__arrow" id="projects-slick__left"></i>
+                    <div class="projects-slick">
+                        <div class="projects-slick-item">
+                            <div class="projects-slick-item__image" style="background-image: url(static/images/print-portifolio.jpg);"></div>
+                            <div class="projects-slick-item-content">
+                                <span class="projects-slick-item-content__title">PORTIFOLIO</span>
+                                <p class="projects-slick-item-content__text">
+                                    A simple one-page website deployed on CIn's webserver for displaying some of my projetcs and social media.
+                                </p>
+                            </div>
+                            <div class="projects-slick-item-footer">
+                                <span class="projects-slick-item-footer__link" number="1">
+                                    <i class="fas fa-mouse-pointer"></i> Click to see more
+                                </span>
+                            </div>
+                        </div>
+                        <div class="projects-slick-item">
+                            <div class="projects-slick-item__image" style="background-image: url(static/images/print-integrar.jpg);"></div>
+                            <div class="projects-slick-item-content">
+                                <span class="projects-slick-item-content__title">INTEGRAR JR</span>
+                                <p class="projects-slick-item-content__text">
+                                    An one-page website developed for Integar Jr junior enterprise on CITi's trainee process.
+                                </p>
+                            </div>
+                            <div class="projects-slick-item-footer">
+                                <span class="projects-slick-item-footer__link" number="2">
+                                    <i class="fas fa-mouse-pointer"></i> Click to see more
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right projects-slick__arrow" id="projects-slick__right"></i>
+                </div>
+            </div>
+            <div class="projects-modal" id="projects-modal-1" style="display: none;">
+                <div class="projects-modal-top">
+                    <span class="projects-modal__title">
+                        PORTIFOLIO
+                    </span>
+                    <div class="projects-modal__close" number="1">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="projects-modal-content">
+                    <div class="projects-modal-content-text">
+                        <p class="projects-modal-content-text__paragraph">
+                            <span class="projects-modal-content-text__paragraph-big">
+                                A simple one-page website developed in pure HTML, CSS and JS (with jQuery).
+                            </span>
+                        </p>
+                        <p class="projects-modal-content-text__paragraph">
+                            It's deployed on CIn's webserver on my personal page at CIn's website.
+                            At the page is possible to see all my projects, make contact with me and see my social media.
+                        </p>
+                    </div>
+                    <div class="projects-modal-content-image">
+                        <img class="projects-modal-content-image__mac" src="static/images/mac-portifolio.jpg" alt="Mac monitor template">
+                        <div class="projects-modal-content-buttons">
+                            <a href="https://github.com/tiagomoraes/portifolio" target="_blank">
+                                <img class="projects-modal-content__github" src="static/icons/social/iconmonstr-github-1.svg" alt="GitHub repository of portifolio project">
+                            </a>
+                            <a class="projects-modal-content-buttons-visit" href="https://cin.ufpe.br/~tbm2/" target="_blank">
+                                <i class="fas fa-mouse-pointer"></i> cin.ufpe.br/~tbm2
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-modal" id="projects-modal-2" style="display: none;">
+                <div class="projects-modal-top">
+                    <span class="projects-modal__title">
+                        INTEGRAR JR
+                    </span>
+                    <div class="projects-modal__close" number="2">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="projects-modal-content">
+                    <div class="projects-modal-content-text">
+                        <p class="projects-modal-content-text__paragraph">
+                            <span class="projects-modal-content-text__paragraph-big">
+                                A Django based one-page website developed for Integar Jr junior enterprise.
+                            </span>
+                        </p>
+                        <p class="projects-modal-content-text__paragraph">
+                            The page is develop in Django with pure HTML, CSS and JS (with jQuery) and deployed on Heroku.
+                            This website was developed for Integrar Jr in CITi's trainee process by me, Carol, Gabriel and Vinicius.
+                        </p>
+
+                    </div>
+                    <div class="projects-modal-content-image">
+                        <img class="projects-modal-content-image__mac" src="static/images/mac-integrar.jpg" alt="Mac monitor template">
+                        <a class="projects-modal-content-visit" href="https://integrarjr.com.br/" target="_blank">
+                            <i class="fas fa-mouse-pointer"></i> integrarjr.com.br
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-        -->
         <section class="contact" id="idContact">
             <div class="contact-flex-container">
                 <h2 class="contact-title">CONTACT</h2>
@@ -176,7 +269,7 @@
             <div class="footer-flex-container">
                 <a href="#idHome" class="footer-logo">
                     <i class="fas fa-caret-up footer-logo__arrow"></i>
-                    <img class="footer-logo__image" src="static/icons/TM-Logo.png" alt="My logo">
+                    <img class="footer-logo__image" src="static/icons/TM-Logo-low-res.png" alt="My logo">
                 </a>
                 <div class="footer-social">
                     <div class="footer-social-box">
