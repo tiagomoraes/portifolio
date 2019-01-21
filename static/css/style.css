@@ -1084,13 +1084,18 @@ body {
     }
 
     /* -------------------- PROJECTS -------------------- */
+    .projects {
+        min-height: 500px;
+    }
+    
     .projects-flex-container {
         width: 86%;
+        height: 100%;
     }
 
     .projects-title {
         margin-top: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
         
         font-size: 2.2rem;
     }
@@ -1110,6 +1115,7 @@ body {
 
     .projects-slick-item {
         height: 58vh;
+        min-height: 300px;
     }
 
     .projects-slick-item-content__title {
