@@ -34,7 +34,7 @@ body {
 }
 
 .navbar-logo {
-    padding-left: 4rem;
+    margin-left: 4rem;
 
     display: flex;
     flex-direction: row;
@@ -94,13 +94,13 @@ body {
 /* -------------------- HOME --------------------*/
 .home {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     height: 100vh;
 
-    background-image: url('../images/eberhard-grossgasteiger-382452-unsplash-small.jpeg');
+    background-image: url('../images/eberhard-grossgasteiger-382452-unsplash-low-res.jpg');
     background-size: cover;
     background-repeat: space;
     background-attachment: fixed;
@@ -147,15 +147,24 @@ body {
     color: white;
 }
 
+.home-down {
+    text-decoration: none;
+    font-size: 2.8rem;
+    color: black;
+
+    position: absolute;
+    top: calc(100% - 50px);
+}
+
 /* -------------------- ABOUT ---------------------*/
 
 .about {
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
 
     background-color: black;
 }
@@ -171,13 +180,12 @@ body {
 }
 
 .about-title {
-    margin-top: 0;
+    margin-top: 40px;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
-
 
     font-family: 'Raleway', sans-serif;
     font-size: 2.7rem;
@@ -314,12 +322,12 @@ body {
 
 /* -------------------- PROJECTS -------------------- */
 .projects {
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
 
     background-color: white;
 }
@@ -331,15 +339,15 @@ body {
     align-items: center;
 
     width: 90%;
-    height: 100%;
+    height: 100vh;
 }
 
 .projects-title {
     width: fit-content;
     align-self: flex-start;
 
-    margin-top: 80px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
@@ -354,16 +362,267 @@ body {
     background-color: black;
 }
 
+.projects-slick-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60%;
+
+    max-width: 1600px;
+    max-height: 800px;
+
+    margin-bottom: 40px;
+}
+
 .projects-slick {    
     width: 90%;
-    height: 60%;
+    height: 100%;
+}
+
+.projects-slick__arrow {
+    margin: 15px;
+
+    font-size: 2.4rem;
+    cursor: pointer;
 }
 
 .projects-slick-item {
-    background-color: black;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
     height: 54vh;
+    max-height: 800px;
+
+    background-color: black;
 }
 
+.projects-slick-item__image {
+    height: 40%;
+    width: 100%;
+
+    z-index: 9999;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.projects-slick-item-content {
+    height: 48%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projects-slick-item-content__title {
+    align-self: flex-start;
+
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 5px 10px;
+
+    background-color: white;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.projects-slick-item-content__text {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+}
+
+.projects-slick-item-footer {
+    width: 100%;
+    height: 8%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-slick-item-footer__link {
+    cursor: pointer;
+
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: black;
+
+    background-color: white;
+    padding: 8px 12px;
+}
+
+.projects-modal {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    z-index: 400;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: black;
+}
+
+.projects-modal-top {
+    width: 100%;
+    height: fit-content;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.projects-modal__title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+
+    background-color: white;
+}
+
+.projects-modal__close {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    margin: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    background-color: white;
+
+    font-size: 1.5rem;
+}
+
+.projects-modal-content {
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projects-modal-content-text {
+    width: 60%;
+}
+
+.projects-modal-content-text__paragraph {
+    margin-right: 6rem;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: white;
+}
+
+.projects-modal-content-text__paragraph-big {
+    font-size: 1.6rem;
+}
+
+.projects-modal-content-image {
+    width: 40%;
+
+    margin: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-modal-content-image__mac {
+    width: 100%;
+    max-height: 100%;
+
+    margin-bottom: 20px;
+}
+
+.projects-modal-content-buttons {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects-modal-content-buttons-visit {
+    margin-left: 40px;
+    padding: 8px 12px;
+
+    cursor: pointer;
+
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+
+    background-color: white;
+}
+
+.projects-modal-content-visit {
+    margin-top: 20px;
+    padding: 8px 12px;
+
+    cursor: pointer;
+
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+
+    background-color: white;
+}
+
+.projects-modal-content__github {
+    height: 3rem;
+}
+    
 .slick-dots li button::before {
     font-size: 0.7rem;
 }
@@ -391,6 +650,7 @@ body {
     height: fit-content;
     width: 600px;
 
+    margin-top: 30px;
     padding: 20px 40px;
 
     border-radius: 5px;
@@ -443,6 +703,7 @@ body {
     border: none;
     border-bottom: 2px solid black;
     outline: none;
+    border-radius: 0;
     
     color: black;
     font-family: 'Lato', sans-serif;
@@ -639,7 +900,7 @@ body {
     }
 
     .navbar-logo {
-        padding-left: 20px;
+        margin: 20px;
     }
 
     .navbar-logo__image {
@@ -690,10 +951,6 @@ body {
 
     .navbar-buttons__link {
         font-size: 1.1rem;
-    }
-
-    .navbar-buttons__link:hover {
-        font-weight: 600;
     }
 
     .navbar-hamburger {
@@ -757,6 +1014,10 @@ body {
     }
 
     /* -------------------- HOME -------------------- */
+    .home {
+        background-attachment: scroll;
+    }
+
     .home-content {
         width: 300px;
     }
@@ -787,6 +1048,7 @@ body {
     }
 
     .about-title {
+        margin-top: 0;
         margin-bottom: 15px;
 
         font-size: 2.2rem;
@@ -827,23 +1089,117 @@ body {
     }
 
     .projects-title {
-        margin-top: 40px;
-        margin-bottom: 60px;
+        margin-top: 30px;
+        margin-bottom: 50px;
         
         font-size: 2.2rem;
     }
 
-    .projects-slick {    
+    .projects-slick-container {    
         height: 64%;
+        width: 100%;
     }
-    
+
+    .projects-slick {
+        width: 95%;
+    }
+
+    .projects-slick__arrow {
+        display: none;
+    }
+
     .projects-slick-item {
         height: 58vh;
     }
 
-    .slick-slide {
+    .projects-slick-item-content__title {
+        margin-top: 20px;
         margin-left: 15px;
         margin-right: 15px;
+    }
+
+    .projects-slick-item-content__text {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+
+        font-size: 1rem;
+    }
+
+    .projects-modal {
+        height: 200vh;
+    }
+
+    .projects-modal-top {
+        margin-bottom: 0;
+    }
+
+    .projects-modal__title {
+        margin: 25px 15px;
+
+        font-size: 2rem;
+
+        align-self: center;
+    }
+
+    .projects-modal__close {
+        width: 2.3rem;
+        height: 2.3rem;
+
+        font-size: 1.4rem;
+
+        margin: 10px;
+    }
+
+    .projects-modal-content {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .projects-modal-content-text__paragraph {
+        font-size: 1.1rem;
+        margin-right: 0;
+    }
+
+    .projects-modal-content-text__paragraph-big {
+        font-size: 1.3rem;
+    }
+
+    .projects-modal-content-image {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    .projects-modal-content-image__mac {
+        width: 70%;
+
+        margin-bottom: 0;
+
+        align-self: center;
+    }
+
+    .projects-modal-content-buttons-visit {
+        margin-left: 20px;
+
+        font-size: 0.9rem;
+    }
+
+    .projects-modal-content-visit {
+        font-size: 0.9rem;
+    }
+
+    .projects-modal-content__github {
+        height: 2.4rem;
+    }
+
+    .projects-modal-content-text {
+        width: 100%;
+    }
+
+    .slick-slide {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     /* -------------------- CONTACT -------------------- */
@@ -859,8 +1215,6 @@ body {
     .contact-title {
         margin-bottom: 25px;
         margin-top: 5px;
-
-        font-size: 24px;
     }
 
     .contact-form__field {
