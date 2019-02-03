@@ -1,9 +1,10 @@
-var express = require('express');
-var app = express();
+let express = require('express');
+let secure = require('ssl-express-www');
+let app = express();
 
-var port = process.env.PORT || 3000;
+let port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(port);
+app.listen(port, () => console.log('Listening on port 3000'));
 
