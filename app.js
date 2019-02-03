@@ -8,7 +8,7 @@ app.use(function (req, res, next) {
     let newURL;
   
     // If not on HTTPS, or not on the main domain, redirect
-    if (req.headers['x-forwarded-proto'] !== 'https' || req.headers.host !== 'hjnilsson.com') {
+    if (req.headers['x-forwarded-proto'] !== 'https' || req.headers.host !== 'tiagomoraes.me') {
   
       newURL = ['https://tiagomoraes.me', req.url].join('');
       return res.redirect(newURL);
