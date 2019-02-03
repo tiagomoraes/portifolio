@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/tiagomoraes/portifolio#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "ssl-express-www": "^3.0.3"
+    "express": "^4.16.4"
   }
 }
