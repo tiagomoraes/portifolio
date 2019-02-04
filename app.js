@@ -1,11 +1,12 @@
-let express = require('express');
-let http = require('http');
-let enforce = require('express-sslify');
+var express = require('express');
+var http = require('http');
+var serveStatic = require('serve-static');
+var enforce = require('express-sslify');
 
-let port = process.env.PORT || 3000;
-let app = express();
+var port = process.env.PORT || 3000;
+var app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use(serveStatic('public', {'index': 'index.html'}));
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 http.createServer(app).listen(port, function() {
