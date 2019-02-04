@@ -1,20 +1,13 @@
 let express = require('express');
-let app = express();
+var http = require('http');
+let enforce = require('express-sslify');
+
 let port = process.env.PORT || 3000;
+let app = express();
 
 app.use(express.static(__dirname + '/public'));
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
-app.use(function (req, res, next) {
-    let newURL;
-  
-    // If not on HTTPS, or not on the main domain, redirect
-    if (req.headers['x-forwarded-proto'] !== 'https' || req.headers.host !== 'tiagomoraes.me') {
-  
-      newURL = ['https://tiagomoraes.me', req.url].join('');
-      return res.redirect(newURL);
-    }
-  
-    return next();
+http.createServer(app).listen(port, function() {
+    console.log('Express server listening on port ' + port);
 });
-
-app.listen(port, () => console.log('Listening on port 3000'));
