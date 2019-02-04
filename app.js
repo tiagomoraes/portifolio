@@ -1,5 +1,5 @@
 let express = require('express');
-var http = require('http');
+let http = require('http');
 let enforce = require('express-sslify');
 
 let port = process.env.PORT || 3000;
