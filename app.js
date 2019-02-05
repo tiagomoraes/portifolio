@@ -1,14 +1,14 @@
-var express = require('express');
-var http = require('http');
-var serveStatic = require('serve-static');
-var enforce = require('express-sslify');
+let express = require('express');
+let serveStatic = require('serve-static');
+let sslRedirect = require('heroku-ssl-redirect');
 
-var port = process.env.PORT || 3000;
-var app = express();
+let port = process.env.PORT || 3000;
+let app = express();
 
-app.use(serveStatic('public', {'index': 'index.html'}));
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use(sslRedirect()); // ensures we are on https on 'production' (default)
 
-http.createServer(app).listen(port, function() {
-    console.log('Express server listening on port ' + port);
+app.use(serveStatic('public', {'index': 'index.html'})); // serves stati files under public
+
+app.listen(port, function() {
+    console.log('Listening on port ' + port);
 });
