@@ -87,6 +87,10 @@ body {
     font-size: 1rem;
 }
 
+.navbar-buttons__link:hover {
+    font-weight: 600;
+}
+
 .navbar-hamburger {
     display: none;
 }
@@ -1076,6 +1080,7 @@ body {
     }
 
     .about-image__image {
+        border-width: 6px;
         margin-bottom: 30px;
     }
 
