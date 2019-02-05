@@ -1219,6 +1219,7 @@ body {
     }
 
     .contact-flex-container {
+        margin-top: 15px;
         width: 80%;
         padding: 20px 20px;
     }
