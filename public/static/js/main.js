@@ -3,6 +3,15 @@ $(document).ready(function(){
   /* -------------------- NAVBAR -------------------- */
   let isMenuShown = false;
 
+  $('.navbar-buttons__link').click(function() {
+    if(isMenuShown) {
+      $('#navbar-buttons-list').slideUp(200); // Proper function that closes the navbar menu
+      isMenuShown=false;
+
+      $('#navbar-x-container').toggleClass("change"); // Makes the X animation adding a css 'change' class
+    }
+  });
+
   $('#navbar-x-container').click(function(event) {
     if(!isMenuShown) {
 
