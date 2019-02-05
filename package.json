@@ -19,7 +19,6 @@
   "homepage": "https://github.com/tiagomoraes/portifolio#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "express-sslify": "^1.2.0",
     "serve-static": "^1.13.2"
   }
 }
