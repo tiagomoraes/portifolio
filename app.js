@@ -25,6 +25,14 @@ app.get('/', (req,res) => {
     res.render('index');
 });
 
+app.get('/portifolio', (req,res) => {
+    res.render('modal-portifolio');
+});
+
+app.get('/integrar', (req,res) => {
+    res.render('modal-integrar');
+});
+
 app.post('/send', (req, res) => {
     const output = `
     <p>You have a new contact request</p>
