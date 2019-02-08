@@ -143,10 +143,10 @@
                 <div class="projects-title wow zoomIn">
                     <span class="projects-title__text">PROJECTS</span>
                 </div>
-                <div class="projects-slick-container wow zoomIn">
+                <div class="projects-slick-container">
                     <i class="fas fa-chevron-left projects-slick__arrow" id="projects-slick__left"></i>
                     <div class="projects-slick">
-                        <div class="projects-slick-item">
+                        <div class="projects-slick-item wow fadeInLeft">
                             <div class="projects-slick-item__image" style="background-image: url(public/static/images/print-portifolio.webp);"></div>
                             <div class="projects-slick-item-content">
                                 <span class="projects-slick-item-content__title">PORTIFOLIO</span>
@@ -160,7 +160,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="projects-slick-item">
+                        <div class="projects-slick-item wow fadeInLeft">
                             <div class="projects-slick-item__image" style="background-image: url(public/static/images/print-integrar.webp);"></div>
                             <div class="projects-slick-item-content">
                                 <span class="projects-slick-item-content__title">INTEGRAR JR</span>
@@ -206,11 +206,11 @@
         </section>
         <footer class="footer" id="idFooter">
             <div class="footer-flex-container">
-                <a href="#idHome" class="footer-logo wow zoomIn">
+                <a href="#idHome" class="footer-logo">
                     <i class="fas fa-caret-up footer-logo__arrow"></i>
                     <img class="footer-logo__image" src="public/static/icons/TM-Logo-low-res.png" alt="My logo">
                 </a>
-                <div class="footer-social wow zoomIn">
+                <div class="footer-social">
                     <div class="footer-social-box">
                         <a class="footer-social-link" href="https://www.linkedin.com/in/tiago-moraes-7516a015b/" target="_blank">
                             <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-linkedin-4.svg" alt="My Linkedin">
@@ -267,5 +267,16 @@
 
     <!--main.js-->
     <script src="public/static/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134148955-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-134148955-1');
+    </script>
+
 </body>
 </html>
