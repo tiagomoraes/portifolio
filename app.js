@@ -1,5 +1,6 @@
 const express = require('express');
-const path = require("path");
+const path = require('path');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const sslRedirect = require('heroku-ssl-redirect');
@@ -7,6 +8,8 @@ const nodemailer = require('nodemailer');
 
 const port = process.env.PORT || 3000;
 const app = express();
+
+app.use(compression()); // used for speed
 
 app.use(sslRedirect()); // ensures we are on https on 'production' (default)
 
