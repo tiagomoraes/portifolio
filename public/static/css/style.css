@@ -1,6 +1,7 @@
 html {
     /* Other option for smooth scrolling */
     /*scroll-behavior: smooth;*/
+    overflow-x: hidden;
 }
 
 body {
