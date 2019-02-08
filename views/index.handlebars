@@ -259,7 +259,10 @@
     <!--WOW.js-->
     <script src="public/static/js/wow.min.js"></script>
     <script>
-        new WOW().init();
+        let wow = new WOW({
+            mobile: false,
+        });
+        wow.init();
     </script>
 
     <!--main.js-->
