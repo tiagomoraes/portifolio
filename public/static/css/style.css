@@ -105,10 +105,11 @@ body {
 
     height: 100vh;
 
-    background-image: url('../images/eberhard-grossgasteiger-382452-unsplash-low-res.jpg');
+    background-image: url('../images/eberhard-grossgasteiger-382452-unsplash-low-res.webp');
     background-size: cover;
     background-repeat: space;
     background-attachment: fixed;
+    background-position-x: center;
     /*filter: grayscale(100%);*/
 }
 
