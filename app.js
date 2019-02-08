@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const sslRedirect = require('heroku-ssl-redirect');
 const nodemailer = require('nodemailer');
-const EmailTemplate = require('email-templates').EmailTemplate;
 
 const port = process.env.PORT || 3000;
 const app = express();
