@@ -751,21 +751,17 @@ body {
 }
 
 .contact-success {
-    margin: 0 auto;
-    margin-top: 50px;
-
+    margin-top: 30px;
     font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
     color: black;
     text-align: center;
-
-   display: none;
 }
 
 .contact-form__submit {
     height: 40px;
     width: 200px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 15px;
 
     cursor: pointer;
@@ -1242,10 +1238,14 @@ body {
         height: 120px;
     }
 
+    .contact-success {
+        margin-top: 20px;
+    }
+
     .contact-form__submit {
         height: 40px;
 
-        margin-top: 30px;
+        margin-top: 20px;
         margin-bottom: 10px;
 
         font-size: 1rem;
