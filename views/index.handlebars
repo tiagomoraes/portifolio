@@ -120,9 +120,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="about-image-container wow zoomIn">
-                    <img class="about-image__image" src="public/static/images/profile1.jpg" alt="Minha foto de perfil">
-                    <div class="about-image-text">
+                <div class="about-image-container">
+                    <img class="about-image__image wow zoomIn" src="public/static/images/profile1.jpg" alt="Minha foto de perfil">
+                    <div class="about-image-text wow zoomIn">
                         <span class="about-image-text__text" id="typed"></span>
                     </div>
                 </div>
@@ -181,15 +181,15 @@
         </section>
         <section class="contact" id="idContact">
             <div class="contact-flex-container wow zoomIn">
-                <h2 class="contact-title wow zoomIn">CONTACT</h2>
+                <h2 class="contact-title">CONTACT</h2>
                 <form method="POST" action="send" class="contact-form" id="contact-form">
                     <div class="contact-form-box">
-                        <input type="text" name="name" id="name" placeholder="Name*" class="contact-form__field form-small wow zoomIn" required>
-                        <input type="tel" name="phone" id="phone" placeholder="Phone" class="contact-form__field form-small wow zoomIn">
+                        <input type="text" name="name" id="name" placeholder="Name*" class="contact-form__field form-small" required>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone" class="contact-form__field form-small">
                     </div>
-                    <input type="email" name="email" id="email" placeholder="Email*" class="contact-form__field wow zoomIn" required>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" class="contact-form__field wow zoomIn">
-                    <div class="contact-form__field wow zoomIn">
+                    <input type="email" name="email" id="email" placeholder="Email*" class="contact-form__field" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" class="contact-form__field">
+                    <div class="contact-form__field">
                         <select name="how_select" id="how" class="contact-form__selector">
                             <option value="default" disabled selected>How did you get here?</option>
                             <option value="Social Network">Social Network</option>
@@ -198,9 +198,9 @@
                             <option value="Other">Other</option>                            
                         </select>
                     </div>
-                    <textarea type="text" name="message" id="message" placeholder="Message" class="contact-form__field form-tall wow zoomIn"></textarea>
+                    <textarea type="text" name="message" id="message" placeholder="Message" class="contact-form__field form-tall"></textarea>
                     <span class="contact-success">{{status}}</span>
-                    <button type="submit" class="contact-form__submit wow zoomIn">Send</button>
+                    <button type="submit" class="contact-form__submit">Send</button>
                 </form>
             </div>
         </section>
