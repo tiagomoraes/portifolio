@@ -77,6 +77,12 @@ $(document).ready(function(){
       }
     });
 
+  /* -------------------- HOME -------------------- */
+  particlesJS.load('particles-js', 'public/static/particles/particles.json', () => {
+    console.log('callback - particles.js config loaded');
+  });
+  
+
   /* -------------------- ABOUT -------------------- */
   var options = {
     backSpeed: 20, // speed of deleting (less == fast)
