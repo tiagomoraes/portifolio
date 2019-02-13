@@ -113,7 +113,7 @@ $(document).ready(function(){
     dotsClass: 'slick-dots projetos-slick__dots',
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1032,
         settings: {
           slidesToShow: 1,
           prevArrow: null,
