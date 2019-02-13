@@ -105,7 +105,7 @@ body {
 
     height: 100vh;
 
-    background-image: url('../images/eberhard-grossgasteiger-382452-unsplash-low-res.jpeg');
+    background-image: url(../images/buildings-low-res.jpeg);
     background-size: cover;
     background-repeat: space;
     background-attachment: fixed;
@@ -121,7 +121,7 @@ body {
     top: 0;
     
     transition: all .5s ease-in-out;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.4);
 }
 
 .home-particles:hover {
@@ -134,7 +134,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    z-index: 100;
+    z-index: 2;
 }
 
 .home-content__bar {
@@ -171,7 +171,7 @@ body {
 }
 
 .home-down {
-    z-index: 100;
+    z-index: 2;
 
     text-decoration: none;
     font-size: 2.8rem;
@@ -509,7 +509,12 @@ body {
 .contact {
     width: 100%;
 
-    background-color: black;
+    position: relative;
+
+    background-image: url(../images/buildings2-low-res.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
 
     display: flex;
     flex-direction: column;
@@ -517,9 +522,21 @@ body {
     align-items: center;
 }
 
+.contact-filter {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+
+    background-color: rgba(0,0,0,0.88);
+}
+
 .contact-flex-container {
     height: fit-content;
     width: 600px;
+
+    z-index: 2;
 
     margin-top: 80px;
     margin-bottom: 60px;
@@ -883,7 +900,7 @@ body {
 
     /* -------------------- HOME -------------------- */
     .home {
-        background-image: url(../images/eberhard-grossgasteiger-382452-unsplash-mobile.jpeg);
+        background-image: url(../images/buildings-mobile.jpeg);
         background-position-y: top;
         background-attachment: scroll;
     }
@@ -908,7 +925,7 @@ body {
 
     /* -------------------- ABOUT -------------------- */
     .about {
-        height: fit-content;
+        min-height: auto;
     }
     
     .about-flex-container {
@@ -956,7 +973,8 @@ body {
 
     /* -------------------- PROJECTS -------------------- */
     .projects {
-        min-height: 500px;
+        height: fit-content;
+        padding-bottom: 20px;
     }
     
     .projects-flex-container {
@@ -1009,6 +1027,11 @@ body {
     }
 
     /* -------------------- CONTACT -------------------- */
+    .contact {
+        background-image: none;
+        background-color: #000000;
+    }
+
     .contact-flex-container {
         margin-top: 40px;
         margin-bottom: 80px;
