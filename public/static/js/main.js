@@ -17,9 +17,8 @@ $(document).ready(function(){
 
       /* Slide down the navbar menu with a callback function to make 
       the div 'display: flex' and not 'display: block' */
-      $('#navbar-buttons-list').slideDown(200, function() { 
-        $(this).css('display', 'flex')}
-      );
+      $('#navbar-buttons-list').slideDown(200);
+      $('#navbar-buttons-list').css('display', 'flex');
       isMenuShown = true;
   
       $('#navbar-x-container').toggleClass("change"); // Makes the X animation adding a css 'change' class
