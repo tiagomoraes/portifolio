@@ -300,7 +300,8 @@ body {
 }
 
 .about-image__image {
-    width: 80%;
+    max-width: 400px;
+    width: 70%;
     margin-bottom: 40px;
 
     border-radius: 100%;
