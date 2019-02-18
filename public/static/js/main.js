@@ -75,6 +75,20 @@ $(document).ready(function(){
         }
       }
     });
+  
+  let scrollTop = 0;
+  $(window).scroll(() => {
+    scrollTop = Math.round($(window).scrollTop());
+    
+    if (scrollTop >= 100) {
+      $('.navbar').addClass('navbar-scrolled');
+      $('.navbar-logo__image').addClass('navbar-logo-scrolled');
+    } else {
+      $('.navbar').removeClass('navbar-scrolled');
+      $('.navbar-logo__image').removeClass('navbar-logo-scrolled');
+    } 
+    
+  }); 
 
   /* -------------------- HOME -------------------- */
   particlesJS.load('particles-js', 'public/static/particles/particles.json', () => {
