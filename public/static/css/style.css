@@ -22,7 +22,7 @@ body {
 /* -------------------- NAVBAR --------------------*/
 .navbar {
     width: 100%;
-    height: 70px;
+    height: 65px;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -86,6 +86,9 @@ body {
     color: white;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
+
+    -webkit-transition: all .2s;
+    transition: all .2s;
 }
 
 .navbar-buttons__link:hover {
@@ -271,7 +274,7 @@ body {
 }
 
 .about-text-paragraph__big{
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
 
 .about-know {
@@ -280,6 +283,10 @@ body {
 
     font-size: 1.5rem;
     list-style-type: square;
+}
+
+.about-know__item {
+    font-size: 1.3rem;
 }
 
 .about-image-container {
@@ -293,7 +300,8 @@ body {
 }
 
 .about-image__image {
-    width: 80%;
+    max-width: 400px;
+    width: 70%;
     margin-bottom: 40px;
 
     border-radius: 100%;
@@ -557,11 +565,9 @@ body {
 
     align-self: flex-start;
 
-    border-bottom: 2px solid black;
-
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: black;
 }
 
@@ -645,7 +651,7 @@ body {
 }
 
 .contact-form__submit {
-    height: 40px;
+    height: 45px;
     width: 200px;
     margin-top: 30px;
     margin-bottom: 15px;
@@ -696,6 +702,12 @@ body {
     margin-bottom: 40px;
 
     text-decoration: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
 }
 
 .footer-logo__arrow {
@@ -731,6 +743,12 @@ body {
     align-items: center;
 
     text-decoration: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.footer-social-link:hover {
+    transform: scale(1.04);
 }
 
 .footer-social__icon {
@@ -811,19 +829,16 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
         
         width: 100%;
-        height: 140px;
 
         position: absolute;
         left: 0;
         top: 100%;
 
         margin: 0;
-        padding-top: 10px;
-        padding-left: 40px;
-        padding-bottom: 10px;
+        padding: 0;
 
         background-color: black;
         border-top: 1px solid white;
@@ -831,8 +846,20 @@ body {
         display: none;
     }
 
-    .navbar-buttons {
-        padding-top: 10px;
+    .navbar-buttons-container {
+        width: 80%;
+        height: 60px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        border-bottom: 1px solid white;
+    }
+
+    .navbar-buttons-container:last-child {
+        border-bottom: 0;
     }
 
     .navbar-buttons__link {
@@ -864,10 +891,6 @@ body {
         width: 24px;
         text-decoration: none;
         position: relative;
-    }
-
-    .navbar-hamburger-icon:hover {
-        font-weight: bold;
     }
 
     .navbar-hamburger__bar {
@@ -907,6 +930,10 @@ body {
         background-image: url(../images/buildings-mobile.jpeg);
         background-position-y: top;
         background-attachment: scroll;
+    }
+
+    .home-particles {
+        display: none;
     }
 
     .home-content {
