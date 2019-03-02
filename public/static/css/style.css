@@ -87,13 +87,14 @@ body {
     font-family: 'Lato', sans-serif;
     
     font-size: 1rem;
+    text-align: center;
 
     -webkit-transition: all .2s;
     transition: all .2s;
 }
 
 .navbar-buttons__link:hover {
-
+    
 }
 
 .navbar-hamburger {
@@ -867,6 +868,7 @@ body {
     }
 
     .navbar-buttons__link {
+        width: 80%;
         font-size: 1.1rem;
     }
 

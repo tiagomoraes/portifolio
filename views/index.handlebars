@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
     <title>Tiago Moraes</title>
+
+    <meta name="description" content="My personal web-developer portifolio, containing all projects I worked on, the tecnologies I know and some contact and social information.">
+    <meta name="keywords" content="Tiago,Moraes,Portifolio,Developer,CITi,HTML,CSS,JavaScript,Node,Django,Express,Integarar,Contact,Social">
+    <meta name="author" content="Tiago Moraes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!--Main CSS-->
@@ -65,7 +70,7 @@
                         <a class="navbar-buttons__link" href="#idAbout">ABOUT</a>
                     </li>
                     <li class="navbar-buttons-container">
-                        <a class="navbar-buttons__link" href="#idProjects" target="_blank">PROJECTS</a>
+                        <a class="navbar-buttons__link" href="#idProjects">PROJECTS</a>
                     </li>
                     <li class="navbar-buttons-container">
                         <a class="navbar-buttons__link" href="#idContact">CONTACT</a>
@@ -104,9 +109,9 @@
                 <div class="about-content-box">
                     <h2 class="about-title wow fadeInUp">ABOUT <span class="about-title__small">ME</span></h2>
                     <div class="about-text">
-                        <p class="about-text-paragraph about-text-paragraph__big wow fadeInUp">Computer Science student at <a href="https://www.ufpe.br/" target="_blank" class="highlight link">UFPE</a> and tech enthusiast.</p>
+                        <p class="about-text-paragraph about-text-paragraph__big wow fadeInUp">Computer Science student at <a href="https://www.ufpe.br/" target="_blank" rel="noopener" class="highlight link">UFPE</a> and tech enthusiast.</p>
                         <p class="about-text-paragraph wow fadeInUp">Developing is one of my passions and now a part of me. I Love studying and discovering new stuff, turning complex problems into simple ones. When i'm not coding, i'm the biggest YouTube fan and random videos lover.</p>
-                        <p class="about-text-paragraph wow fadeInUp">Currently I’m a Full Stack developer <a href="http://citi.org.br/" target="_blank" class="highlight link">@CITi</a> and opened for new oportunities.</p>
+                        <p class="about-text-paragraph wow fadeInUp">Currently I’m a Full Stack developer <a href="http://citi.org.br/" target="_blank" rel="noopener" class="highlight link">@CITi</a> and opened for new oportunities.</p>
                     </div>
                     <h2 class="about-title about-title__small wow fadeInUp">What I know?</h2>
                     <div class="about-text">
@@ -203,7 +208,6 @@
                         </select>
                     </div>
                     <textarea type="text" name="message" id="message" placeholder="Message" class="contact-form__field form-tall"></textarea>
-                    <span class="contact-success">{{status}}</span>
                     <button type="submit" class="contact-form__submit">Send</button>
                 </form>
             </div>
@@ -216,21 +220,21 @@
                 </a>
                 <div class="footer-social">
                     <div class="footer-social-box">
-                        <a class="footer-social-link" href="https://www.linkedin.com/in/tiago-moraes-7516a015b/" target="_blank">
+                        <a class="footer-social-link" href="https://www.linkedin.com/in/tiagobmoraes/" target="_blank" rel="noopener">
                             <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-linkedin-4.svg" alt="My Linkedin">
                             <span class="footer-social__text">tiagobmoraes</span>
                         </a>
-                        <a class="footer-social-link" href="https://github.com/tiagomoraes" target="_blank">
+                        <a class="footer-social-link" href="https://github.com/tiagomoraes/" target="_blank" rel="noopener">
                             <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-github-1.svg" alt="My GitHub">
                             <span class="footer-social__text">tiagomoraes</span>
                         </a>
                     </div>
                     <div class="footer-social-box">
-                        <a class="footer-social-link" href="mailto:tiago3902@gmail.com" target="_blank">
+                        <a class="footer-social-link" href="mailto:tiago3902@gmail.com" target="_blank" rel="noopener">
                             <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-email-10.svg" alt="My email">
                             <span class="footer-social__text">tiago3902@gmail.com</span>
                         </a>
-                        <a class="footer-social-link" href="https://web.facebook.com/tiago.moraes.14224/" target="_blank">
+                        <a class="footer-social-link" href="https://web.facebook.com/tiago.moraes.14224/" target="_blank" rel="noopener">
                             <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-facebook-4.svg" alt="My Facebook">
                             <span class="footer-social__text">tiago.moraes.14224</span>
                         </a>
@@ -251,8 +255,6 @@
 
     <!--jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
     <!--Slick JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
