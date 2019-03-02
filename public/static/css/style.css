@@ -85,6 +85,7 @@ body {
     text-decoration: none;
     color: white;
     font-family: 'Lato', sans-serif;
+    
     font-size: 1rem;
     text-align: center;
 
@@ -93,7 +94,7 @@ body {
 }
 
 .navbar-buttons__link:hover {
-    /*font-weight: 600;*/
+    
 }
 
 .navbar-hamburger {
@@ -118,6 +119,15 @@ body {
     overflow: hidden;
 }
 
+.home-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    
+    background-color: rgba(0,0,0,0.4);
+}
+
 .home-particles {
     width: 100%;
     height: 100%;
@@ -125,7 +135,6 @@ body {
     top: 0;
     
     transition: all .5s ease-in-out;
-    background-color: rgba(0,0,0,0.4);
 }
 
 .home-particles:hover {
@@ -382,10 +391,7 @@ body {
 
     margin-top: 60px;
     margin-bottom: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 15px;
 
     font-family: 'Raleway', sans-serif;
     font-size: 2.7rem;
@@ -539,7 +545,7 @@ body {
     position: absolute;
     top: 0;
 
-    background-color: rgba(0,0,0,0.88);
+    background-color: rgba(0,0,0,0.85);
 }
 
 .contact-flex-container {
@@ -551,8 +557,6 @@ body {
     margin-top: 80px;
     margin-bottom: 60px;
     padding: 20px 40px;
-
-    border-radius: 5px;
 
     display: flex;
     flex-direction: column;
@@ -1061,8 +1065,7 @@ body {
 
     /* -------------------- CONTACT -------------------- */
     .contact {
-        background-image: none;
-        background-color: #000000;
+        
     }
 
     .contact-flex-container {
