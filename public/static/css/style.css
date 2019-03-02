@@ -94,7 +94,7 @@ body {
 }
 
 .navbar-buttons__link:hover {
-    
+
 }
 
 .navbar-hamburger {
@@ -1065,7 +1065,8 @@ body {
 
     /* -------------------- CONTACT -------------------- */
     .contact {
-        
+        background-color: black;
+        background-image: none;
     }
 
     .contact-flex-container {
