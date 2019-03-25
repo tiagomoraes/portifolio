@@ -805,23 +805,10 @@ body {
 @media (max-width: 1024px) {
 
     /* -------------------- NAVBAR -------------------- */
-    .navbar {
-        height: 60px;
-    }
-
     .navbar-logo {
         margin: 20px;
     }
 
-    .navbar-logo__image {
-        height: 45px;
-    }
-
-    .navbar-logo__text {
-        font-size: 1.2rem;
-        margin-left: 6px;
-    }
-    
     .navbar-collapse {
         display: flex;
         margin: 0;
