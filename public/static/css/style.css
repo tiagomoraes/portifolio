@@ -45,19 +45,9 @@ body {
 }
 
 .navbar-logo__image {
-    height: 50px;
+    height: 55px;
     width: auto;
 
-    align-self: center;
-}
-
-.navbar-logo__text {
-    margin-left: 0.5rem;
-
-    font-family: 'Lato', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: white;
     align-self: center;
 }
 
@@ -65,13 +55,23 @@ body {
     margin-right: 4rem;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-bar {
+    height: 2px;
+    width: 8rem;
+    margin-right: 2rem;
+
+    background-color: #ffffff;
 }
 
 .navbar-buttons {
+    width: 24rem;
     margin: 0;
-    width: 480px;
+    padding-left: 0;
 
     display: flex;
     flex-direction: row;
@@ -84,10 +84,11 @@ body {
 .navbar-buttons__link {
     text-decoration: none;
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     
-    font-size: 1rem;
+    font-size: .9rem;
     text-align: center;
+    font-weight: 600;
 
     -webkit-transition: all .2s;
     transition: all .2s;
@@ -669,7 +670,7 @@ body {
     outline: none;
 
     font-family: 'Lato', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -813,7 +814,7 @@ body {
     }
 
     .navbar-logo__image {
-        height: 40px;
+        height: 45px;
     }
 
     .navbar-logo__text {
@@ -824,6 +825,10 @@ body {
     .navbar-collapse {
         display: flex;
         margin: 0;
+    }
+
+    .navbar-bar {
+        display: none;
     }
 
     .navbar-menu {
@@ -869,7 +874,7 @@ body {
 
     .navbar-buttons__link {
         width: 80%;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .navbar-hamburger {
@@ -893,8 +898,8 @@ body {
         justify-content: space-around;
         align-items: flex-end;
         color: white;
-        height: 24px;
-        width: 24px;
+        height: 28px;
+        width: 28px;
         text-decoration: none;
         position: relative;
     }
@@ -902,7 +907,7 @@ body {
     .navbar-hamburger__bar {
         background-color: white;
         height: 2px;
-        width: 24px;
+        width: 28px;
 
         transition: all .2s ease-out;
     }
