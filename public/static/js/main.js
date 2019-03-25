@@ -65,7 +65,7 @@ $(document).ready(function(){
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
           $('html, body').animate({
-            scrollTop: (target.offset().top - 59) // Scrolls to position with mobile navbar offset
+            scrollTop: (target.offset().top - 64) // Scrolls to position with mobile navbar offset
           }, 1000, function() {
             // Callback after animation
             // Must change focus!
