@@ -925,7 +925,6 @@ body {
 
     /* -------------------- HOME -------------------- */
     .home {
-        background-image: url(../images/buildings-mobile.jpeg);
         background-position-y: top;
         background-attachment: scroll;
     }
