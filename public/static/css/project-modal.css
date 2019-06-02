@@ -1,18 +1,12 @@
 
 .projects-modal {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
-    z-index: 400;
-
-    position: fixed;
-    top: 0;
-    left: 0;
 
     background-color: black;
 }
@@ -154,10 +148,6 @@
 }
 
 @media(max-width: 1024px) {
-    .projects-modal {
-        height: 200vh;
-    }
-
     .projects-modal-top {
         margin-bottom: 0;
     }
