@@ -366,7 +366,7 @@ body {
 
 /* -------------------- PROJECTS -------------------- */
 .projects {
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -383,7 +383,8 @@ body {
     align-items: center;
 
     width: 90%;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
 }
 
 .projects-title {
@@ -410,12 +411,11 @@ body {
     align-items: center;
 
     width: 100%;
-    height: 60%;
+    height: fit-content;
 
     max-width: 1600px;
-    max-height: 800px;
 
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .projects-slick {    
@@ -435,9 +435,12 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin: 0 auto;
     
     height: 54vh;
     max-height: 800px;
+    min-height: 480px !important;
+    max-width: 320px;
 
     background-color: black;
 }
@@ -509,6 +512,9 @@ body {
 
     background-color: white;
     padding: 8px 12px;
+}
+.slick-dots {
+  bottom: -40px;
 }
     
 .slick-dots li button::before {

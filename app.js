@@ -35,6 +35,10 @@ app.get('/integrar', (req,res) => {
     res.render('modal-integrar');
 });
 
+app.get('/symvoulos', (req,res) => {
+  res.render('modal-symvoulos');
+});
+
 app.post('/send', (req, res) => {
     const output = `
     <p>You have a new contact request</p>

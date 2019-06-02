@@ -126,11 +126,16 @@ $(document).ready(function(){
     dotsClass: 'slick-dots projetos-slick__dots',
     responsive: [
       {
-        breakpoint: 1032,
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 820,
         settings: {
           slidesToShow: 1,
-          prevArrow: null,
-          nextArrow: null,
+          arrows: false,
         }
       },
     ]
