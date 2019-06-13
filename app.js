@@ -1,3 +1,5 @@
+// ==================== EXTERNAL IMPORTS ==================== //
+
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
@@ -5,9 +7,31 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const sslRedirect = require('heroku-ssl-redirect');
 const nodemailer = require('nodemailer');
+const firebase = require('firebase')
+require('dotenv').config();
+
+// ==================== INTERNAL IMPORTS ==================== //
+
+// ==================== GLOBAL VARIABLES ==================== //
 
 const port = process.env.PORT || 3000;
 const app = express();
+
+// ==================== FIREBASE ==================== //
+
+firebase.initializeApp({
+  apiKey: process.env.FIREBASE_KEY,
+  authDomain: "portifolio-tiagomoraes.firebaseapp.com",
+  databaseURL: "https://portifolio-tiagomoraes.firebaseio.com",
+  projectId: "portifolio-tiagomoraes",
+  storageBucket: "portifolio-tiagomoraes.appspot.com",
+  messagingSenderId: "914374598997",
+  appId: "1:914374598997:web:ef8670019ffd9cff"
+});
+
+const db = firebase.database();
+
+// ==================== MIDDLEWARE ==================== //
 
 app.use(compression()); // used for speed
 
@@ -22,6 +46,8 @@ app.use('/public', express.static(path.join(__dirname, 'public'))); // serves st
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// ==================== ROUTES ==================== //
 
 app.get('/', (req,res) => {
     res.render('index');
@@ -87,6 +113,10 @@ app.post('/send', (req, res) => {
     
     main().catch(console.error);
 });
+
+// ==================== FUNCTIONS ==================== //
+
+// ==================== START APP ==================== //
 
 app.listen(port, () => {
     console.log('Listening on port ' + port);
