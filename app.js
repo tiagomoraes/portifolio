@@ -6,7 +6,7 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const sslRedirect = require('heroku-ssl-redirect');
 const nodemailer = require('nodemailer');
-const firebase = require('firebase')
+const firebase = require('firebase');
 require('dotenv').config();
 
 // ==================== INTERNAL IMPORTS ==================== //
@@ -19,7 +19,7 @@ const app = express();
 // ==================== FIREBASE ==================== //
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBvxdB6V7OBcfOnMKgy480Tc9AGQpOSB18",
+  apiKey: process.env.FIREBASE_KEY,
   authDomain: "portifolio-tiagomoraes.firebaseapp.com",
   databaseURL: "https://portifolio-tiagomoraes.firebaseio.com",
   projectId: "portifolio-tiagomoraes",
@@ -54,8 +54,21 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   try {
     db.ref('/projects').once('value').then((snapshot) => {
-      const projects = snapshot.val();
+      const projects = Object.entries(snapshot.val());
       res.render('index', {"projects": projects});
+    })
+  } catch (error) {
+    console.log(error)
+    res.render('index');
+  }
+});
+
+app.get('/project', (req, res) => {
+  const projectKey = req.query.pk;
+  try {
+    db.ref(`/projects/${projectKey}`).once('value').then((snapshot) => {
+      const project = snapshot.val();
+      res.render('modal', {"project": project});
     })
   } catch (error) {
     console.log(error)

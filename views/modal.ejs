@@ -44,9 +44,7 @@
 <body>
     <div class="projects-modal">
         <div class="projects-modal-top">
-            <span class="projects-modal__title">
-                INTEGRAR JR
-            </span>
+            <span class="projects-modal__title"><%= project.title %></span>
             <div class="projects-modal__close">
                 <i class="fas fa-times"></i>
             </div>
@@ -54,20 +52,15 @@
         <div class="projects-modal-content">
             <div class="projects-modal-content-text">
                 <p class="projects-modal-content-text__paragraph">
-                    <span class="projects-modal-content-text__paragraph-big">
-                        A Django based one-page website developed for Integar Jr junior enterprise.
-                    </span>
+                    <span class="projects-modal-content-text__paragraph-big"><%= project.short_description %></span>
                 </p>
-                <p class="projects-modal-content-text__paragraph">
-                    The page is develop in Django with pure HTML, CSS and JS (with jQuery) and deployed on Heroku.
-                    This website was developed for Integrar Jr in CITi's trainee process by me, Carol, Gabriel and Vinicius.
-                </p>
+                <p class="projects-modal-content-text__paragraph"><%= project.description %></p>
 
             </div>
             <div class="projects-modal-content-image">
-                <img class="projects-modal-content-image__mac" src="public/static/images/mac-integrar.jpg" alt="Mac monitor template">
-                <a class="projects-modal-content-visit" href="http://integrarjr.com.br" target="_blank">
-                    <i class="fas fa-mouse-pointer"></i> integrarjr.com.br
+                <img class="projects-modal-content-image__mac" src="<%= project.mac %>" alt="Mac monitor template">
+                <a class="projects-modal-content-visit" href="<%= project.link %>" target="_blank">
+                    <i class="fas fa-mouse-pointer"></i> <%= project.link.split('//')[1] %>
                 </a>
             </div>
         </div>

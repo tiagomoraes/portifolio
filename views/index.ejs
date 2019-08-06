@@ -151,7 +151,21 @@
                 <div class="projects-slick-container wow fadeInUp">
                     <i class="fas fa-chevron-left projects-slick__arrow" id="projects-slick__left"></i>
                     <div class="projects-slick">
-                        <%console.log(projects)%>
+                    <% projects.forEach(([key, project]) => { %>
+                        <div class="projects-slick-item">
+                            <div class="projects-slick-item__image" style="background-image: url(<%= project.print %>);"></div>
+                            <div class="projects-slick-item-content">
+                                <span class="projects-slick-item-content__title"><%= project.title %></span>
+                                <p class="projects-slick-item-content__text"><%= project.short_description %></p>
+                            </div>
+                            <div class="projects-slick-item-footer">
+                                <a href="/project?pk=<%= key %>" class="projects-slick-item-footer__link">
+                                    <i class="fas fa-mouse-pointer"></i> Click to see more
+                                </a>
+                            </div>
+                        </div>
+                    <% }); %>
+                    </div>
                     <i class="fas fa-chevron-right projects-slick__arrow" id="projects-slick__right"></i>
                 </div>
             </div>
