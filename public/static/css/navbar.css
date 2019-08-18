@@ -65,7 +65,7 @@ body {
 }
 
 .navbar-buttons-link__custom {
-  padding: .3rem 1rem;
+  padding: .4rem 1rem;
   background-color: #ffffff;
   border-radius: 20px;
   border: 2px solid #ffffff;
@@ -80,4 +80,25 @@ body {
 .navbar-buttons-link__custom:hover {
   background-color: transparent;
   color: #ffffff;
+}
+
+.sidebar {
+  height: 8rem;
+  padding: .8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  right: 0;
+  top: calc(50vh - 4rem);
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.sidebar-icon {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #000000;
 }
