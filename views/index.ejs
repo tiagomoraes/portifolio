@@ -12,9 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!--importing Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap" rel="stylesheet">
     
     <!--inporting icons-->
     <!--FAVICON-->
@@ -48,70 +46,24 @@
 
     <!--Main CSS-->
     <link rel="stylesheet" type="text/css" media="screen" href="public/static/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="public/static/css/style.css" />
+    <%# <link rel="stylesheet" type="text/css" media="screen" href="public/static/css/style.css" /> %>
 
 </head>
 <body>
     <div class="flex-container">
-        <nav class="navbar" id="idNavbar">
-            <a class="navbar-logo" href="#idHome">
-                <img class="navbar-logo__image" src="public/static/icons/Logo_TiagoMoraes_BLACK.svg" alt="Tiago Moraes Logo">
-            </a>
-            <div class="navbar-collapse">
-                <div class="navbar-bar"></div>
-                <ul class="navbar-buttons" id="navbar-buttons-list">
-                    <li class="navbar-buttons-container">
-                        <a class="navbar-buttons__link" href="#idHome">HOME</a>
-                    </li>
-                    <li class="navbar-buttons-container">
-                        <a class="navbar-buttons__link" href="#idAbout">ABOUT</a>
-                    </li>
-                    <li class="navbar-buttons-container">
-                        <a class="navbar-buttons__link" href="#idProjects">PROJECTS</a>
-                    </li>
-                    <li class="navbar-buttons-container">
-                        <a class="navbar-buttons__link" href="#idContact">CONTACT</a>
-                    </li>
-                    <li class="navbar-buttons-container">
-                        <a class="navbar-buttons__link" href="#idFooter">SOCIAL</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-hamburger navbar-responsive">
-                <div class="navbar-hamburger-box">
-                    <a class="navbar-hamburger-icon" id="navbar-x-container">
-                        <div class="navbar-hamburger__bar bar1"></div>
-                        <div class="navbar-hamburger__bar bar2"></div>
-                        <div class="navbar-hamburger__bar bar3"></div>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <section class="home" id="idHome">
-            <div class="home-filter"></div>
-            <div id="particles-js" class="home-particles"></div>
-            <div class="home-content">
-                <div class="home-content__bar"></div>
-                <div class="home-content-box">
-                    <h2 class="home-content-box__title">DEVELOPER PORTIFOLIO</h2>
-                </div>
-                <div class="home-content__bar"></div>
-            </div>
-            <a href="#idAbout" class="home-down">
-                <i class="fas fa-caret-down"></i>
-            </a>
-        </section>
+        <% include partials/navbar.ejs %>
+        <% include partials/home.ejs %>
         <section class="about" id="idAbout">
             <div class="about-flex-container">
                 <div class="about-content-box">
-                    <h2 class="about-title wow fadeInUp">ABOUT <span class="about-title__small">ME</span></h2>
+                    <h2 class="about-title">ABOUT <span class="about-title__small">ME</span></h2>
                     <div class="about-text">
                         <p class="about-text-paragraph about-text-paragraph__big">Computer Science student at <a href="https://www.ufpe.br/" target="_blank" rel="noopener" class="highlight link">UFPE</a> and tech enthusiast.</p>
                         <p class="about-text-paragraph">Developing is one of my passions and now a part of me. I Love studying and discovering new stuff, turning complex problems into simple ones. When i'm not coding, i'm the biggest YouTube fan and random videos lover.</p>
                         <p class="about-text-paragraph">Currently I’m a Full Stack developer <a href="http://citi.org.br/" target="_blank" rel="noopener" class="highlight link">@CITi</a> and opened for new oportunities.</p>
                     </div>
-                    <h2 class="about-title about-title__small wow fadeInUp">What I know?</h2>
-                    <div class="about-text wow fadeInUp">
+                    <h2 class="about-title about-title__small">What I know?</h2>
+                    <div class="about-text">
                         <ul class="about-know">
                             <li class="about-know__item">Java</li>
                             <li class="about-know__item">C++</li>
@@ -145,10 +97,10 @@
         </section>
         <section class="projects" id="idProjects">
             <div class="projects-flex-container">
-                <div class="projects-title wow fadeInUp">
+                <div class="projects-title">
                     <span class="projects-title__text">Projects</span>
                 </div>
-                <div class="projects-slick-container wow fadeInUp">
+                <div class="projects-slick-container">
                     <i class="fas fa-chevron-left projects-slick__arrow" id="projects-slick__left"></i>
                     <div class="projects-slick">
                     <% projects.forEach(([key, project]) => { %>
