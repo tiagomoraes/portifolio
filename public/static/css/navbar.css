@@ -14,7 +14,7 @@ body {
   position: fixed;
   top: 0;
 
-  z-index: 2;
+  z-index: 1;
 }
 
 .navbar-container {
@@ -43,7 +43,7 @@ body {
 }
 
 .navbar-buttons-link {
-  margin: 0 1.2rem;
+  margin-left: 2.5rem;
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
@@ -82,6 +82,15 @@ body {
   color: #ffffff;
 }
 
+.navbar-mobile {
+  display: none;
+}
+
+.navbar-hamburger {
+  display: none;
+  z-index: 3;
+}
+
 .sidebar {
   height: 8rem;
   padding: .8rem;
@@ -93,7 +102,7 @@ body {
   position: fixed;
   right: 0;
   top: calc(50vh - 4rem);
-  z-index: 2;
+  z-index: 1;
   background-color: #ffffff;
 }
 
@@ -101,4 +110,77 @@ body {
   font-size: 1.6rem;
   text-decoration: none;
   color: #000000;
+}
+
+/* iPad pro*/
+@media(max-width: 1024px) {
+  .navbar-container {
+    width: 90%;
+  }
+  
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-mobile {
+
+  }
+
+  .navbar-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 2.4rem;
+    height: 1.6rem;
+  }
+
+  .navbar-hamburger-bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    transition: .2s all ease-in-out;
+  }
+
+  .bar-0 {
+    width: 70%;
+  }
+
+  .navbar-hamburger-active {
+    position: relative;
+  }
+
+  .navbar-hamburger-active .bar-0 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  .navbar-hamburger-active .bar-1 {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+  }
+
+  .navbar-hamburger-active .bar-2 {
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  .navbar-mobile {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    z-index: 2;
+  }
+
 }

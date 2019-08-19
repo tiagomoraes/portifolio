@@ -17,6 +17,10 @@
 }
 
 .home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 70%;
   max-width: 1200px;
 }
@@ -62,4 +66,10 @@
 .home-call:hover {
   background-color: transparent;
   color: #ffffff;
+}
+
+.home-down {
+  align-self: center;
+  position: absolute;
+  bottom: calc(0% + 2rem);
 }
