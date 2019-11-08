@@ -1,0 +1,136 @@
+<section class="about" id="idAbout">
+  <div class="about-flex-container">
+      <div class="about-content-box">
+          <h2 class="about-title">ABOUT <span class="about-title__small">ME</span></h2>
+          <div class="about-text">
+              <p class="about-text-paragraph about-text-paragraph__big">Computer Science student at <a href="https://www.ufpe.br/" target="_blank" rel="noopener" class="highlight link">UFPE</a> and tech enthusiast.</p>
+              <p class="about-text-paragraph">Developing is one of my passions and now a part of me. I Love studying and discovering new stuff, turning complex problems into simple ones. When i'm not coding, i'm the biggest YouTube fan and random videos lover.</p>
+              <p class="about-text-paragraph">Currently I’m a Full Stack developer <a href="http://citi.org.br/" target="_blank" rel="noopener" class="highlight link">@CITi</a> and opened for new oportunities.</p>
+          </div>
+          <h2 class="about-title about-title__small">What I know?</h2>
+          <div class="about-text">
+              <ul class="about-know">
+                  <li class="about-know__item">Java</li>
+                  <li class="about-know__item">C++</li>
+                  <li class="about-know__item">HTML</li>
+                  <li class="about-know__item">CSS</li>
+                  <li class="about-know__item">JavaScript</li>
+                  <li class="about-know__item">jQuery</li>
+                  <li class="about-know__item">Python</li>
+                  <li class="about-know__item">Django</li>
+                  <li class="about-know__item">Express.js</li>
+              </ul>
+          </div>
+      </div>
+      <div class="about-image-container">
+          <img class="about-image__image" src="public/static/images/profile1.jpg" alt="Minha foto de perfil">
+          <div class="about-image-text">
+              <span class="about-image-text__text" id="typed"></span>
+          </div>
+      </div>
+
+      <div id="typed-html">
+          <p></p>
+          <p>
+              Hi, I'm <span class="highlight">TIAGO MORAES</span>. 
+          </p>
+          <p>
+              Nice to meet you!
+          </p>
+      </div>
+  </div>
+</section>
+<section class="projects" id="idProjects">
+  <div class="projects-flex-container">
+      <div class="projects-title">
+          <span class="projects-title__text">Projects</span>
+      </div>
+      <div class="projects-slick-container">
+          <i class="fas fa-chevron-left projects-slick__arrow" id="projects-slick__left"></i>
+          <div class="projects-slick">
+          <% projects.forEach(([key, project]) => { %>
+              <div class="projects-slick-item">
+                  <div class="projects-slick-item__image" style="background-image: url(<%= project.print %>);"></div>
+                  <div class="projects-slick-item-content">
+                      <span class="projects-slick-item-content__title"><%= project.title %></span>
+                      <p class="projects-slick-item-content__text"><%= project.short_description %></p>
+                  </div>
+                  <div class="projects-slick-item-footer">
+                      <a href="/project?pk=<%= key %>" class="projects-slick-item-footer__link">
+                          <i class="fas fa-mouse-pointer"></i> Click to see more
+                      </a>
+                  </div>
+              </div>
+          <% }); %>
+          </div>
+          <i class="fas fa-chevron-right projects-slick__arrow" id="projects-slick__right"></i>
+      </div>
+  </div>
+</section>
+<section class="contact" id="idContact">
+  <div class="contact-filter"></div>
+  <div class="contact-flex-container">
+      <h2 class="contact-title">CONTACT</h2>
+      <form method="POST" action="send" class="contact-form" id="contact-form">
+          <div class="contact-form-box">
+              <input type="text" name="name" id="name" placeholder="Name*" class="contact-form__field form-small" required>
+              <input type="tel" name="phone" id="phone" placeholder="Phone" class="contact-form__field form-small">
+          </div>
+          <input type="email" name="email" id="email" placeholder="Email*" class="contact-form__field" required>
+          <input type="text" name="subject" id="subject" placeholder="Subject" class="contact-form__field">
+          <div class="contact-form__field">
+              <select name="how_select" id="how" class="contact-form__selector">
+                  <option value="default" disabled selected>How did you get here?</option>
+                  <option value="Social Network">Social Network</option>
+                  <option value="CIn Website">Cin Website</option>
+                  <option value="Some friend">Some Friend</option>
+                  <option value="Other">Other</option>                            
+              </select>
+          </div>
+          <textarea type="text" name="message" id="message" placeholder="Message" class="contact-form__field form-tall"></textarea>
+          <button type="submit" class="contact-form__submit">Send</button>
+      </form>
+  </div>
+</section>
+<footer class="footer" id="idFooter">
+  <div class="footer-flex-container">
+      <a href="#idHome" class="footer-logo">
+          <i class="fas fa-caret-up footer-logo__arrow"></i>
+          <img class="footer-logo__image" src="public/static/icons/TM-Logo-low-res.png" alt="My logo">
+      </a>
+      <div class="footer-social">
+          <div class="footer-social-box">
+              <a class="footer-social-link" href="https://www.linkedin.com/in/tiagobmoraes/" target="_blank" rel="noopener">
+                  <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-linkedin-4.svg" alt="My Linkedin">
+                  <span class="footer-social__text">tiagobmoraes</span>
+              </a>
+              <a class="footer-social-link" href="https://github.com/tiagomoraes/" target="_blank" rel="noopener">
+                  <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-github-1.svg" alt="My GitHub">
+                  <span class="footer-social__text">tiagomoraes</span>
+              </a>
+          </div>
+          <div class="footer-social-box">
+              <a class="footer-social-link" href="mailto:tiago3902@gmail.com" target="_blank" rel="noopener">
+                  <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-email-10.svg" alt="My email">
+                  <span class="footer-social__text">tiago3902@gmail.com</span>
+              </a>
+              <a class="footer-social-link" href="https://web.facebook.com/tiago.moraes.14224/" target="_blank" rel="noopener">
+                  <img class="footer-social__icon" src="public/static/icons/social/iconmonstr-facebook-4.svg" alt="My Facebook">
+                  <span class="footer-social__text">tiago.moraes.14224</span>
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <div class="footer-bottom-copyright">
+          Copyright <i class="far fa-copyright"></i> 2018 by Tiago Moraes
+      </div>
+      <div class="footer-bottom-made">Made with
+          <i class="fa fa-code"></i> and
+          <i class="far fa-heart"></i> by
+          <a href="https://tiagomoraes.me" class="footer-bottom-link">
+              <i class="fas fa-trademark"></i>
+          </a>
+      </div>
+  </div>
+</footer>

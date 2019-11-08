@@ -1,13 +1,19 @@
 $(document).ready(() => {
-  let icon = $('#navbar-hamburger');
+  const icon = $('#navbar-hamburger');
+  const mobileLinks = $('.navbar-mobile-buttons-link, .navbar-mobile-buttons-link__custom');
   let isMobileOpened = 0;
+  
   icon.click(() => {
     if(!isMobileOpened) { // check if mobile navbar menu is opened
       openMobile();
     } else {
       closeMobile();
     }
-  })
+  });
+
+  mobileLinks.click(() => {
+    closeMobile();
+  });
 
   // handles all opening of mobile navbar
   const openMobile = () => {

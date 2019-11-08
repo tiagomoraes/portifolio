@@ -48,7 +48,7 @@
 
 .home-text {
   border-left: 2px solid #ffffff;
-  padding-left: 1rem;
+  padding-left: .8rem;
 }
 
 .home-call {
@@ -77,4 +77,42 @@
 
 .home-down:hover {
   transform: translateY(-.5rem) scale(1.05);
+}
+
+/* iPad pro*/
+@media(max-width: 1024px) {
+  .home-container {
+    width: 85%;
+  }
+
+  .home-name {
+    font-size: 6rem;
+  }
+
+  .home-text {
+    width: calc(100% - 1rem);
+  }
+}
+
+/* iPad pro*/
+@media(max-width: 768px) {
+  .home-name {
+    font-size: 4.5rem;
+  }
+
+  .home-text {
+    width: calc(100% - .8rem);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .home-call {
+    padding: .6rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .home-down {
+    bottom: calc(0% + 1rem);
+  }
 }
